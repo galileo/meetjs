@@ -28,7 +28,7 @@ jobs:
           name: Push application Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              CLUSTER='summitmeetjs'
+              CLUSTER='cluster-meetjs'
               FAMILY='summitmeetjs'
               DOCKER_IMAGE='summitmeetjs'
               TASK='summitmeetjs'
