@@ -22,22 +22,22 @@ jobs:
           command: |
             docker version
             docker images
-            docker build -t meetjs .
+            docker build -t summitmeetjs .
             docker images
       - deploy:
           name: Push application Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              CLUSTER='meetjs'
-              FAMILY='meetjs'
-              DOCKER_IMAGE='meetjs'
-              TASK='meetjs'
+              CLUSTER='summitmeetjs'
+              FAMILY='summitmeetjs'
+              DOCKER_IMAGE='summitmeetjs'
+              TASK='summitmeetjs'
               SERVICE='app-service'
               # Login to AWS
               aws configure set region $AWS_REGION
               $(aws ecr get-login)
               # Tag and push docker image
-              docker tag meetjs $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
+              docker tag summitmeetjs $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
               docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
               # Create task for docker deploy
               task_template='[
