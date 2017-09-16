@@ -74,7 +74,7 @@ jobs:
                   "logConfiguration": null,
                   "cpu": 10,
                   "privileged": null,
-                  "memoryReservation": null
+                  "memoryReservation": null,
                   "environment" : [
                       { "name" : "NODE_ENV", "value" : "production" }
                   ]
