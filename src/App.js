@@ -11,7 +11,7 @@ class App extends Component {
           <h2>Meetjs.pl React Application</h2>
         </div>
         <p className="App-intro">
-          Hello Prime! To get started, edit <code>src/App.js</code> and save to reload.
+          Cześć słoneczko :*! To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
