@@ -24,8 +24,6 @@ jobs:
             docker images
             docker build -t meetjs .
             docker images
-            docker tag meetjs:latest 861611597471.dkr.ecr.us-west-2.amazonaws.com/meetjs:latest
-            docker push 861611597471.dkr.ecr.us-west-2.amazonaws.com/meetjs:latest
       - deploy:
           name: Push application Docker image
           command: |
