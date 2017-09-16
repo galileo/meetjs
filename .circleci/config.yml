@@ -31,7 +31,7 @@ jobs:
               CLUSTER='cluster-meetjs'
               FAMILY='summitmeetjs'
               DOCKER_IMAGE='summitmeetjs'
-              TASK='summitmeetjs'
+              TASK='task-meetjs'
               SERVICE='app-service'
               # Login to AWS
               aws configure set region $AWS_REGION
