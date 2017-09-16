@@ -28,16 +28,16 @@ jobs:
           name: Push application Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              CLUSTER='circlecisummit'
-              FAMILY='circlecisummit'
-              DOCKER_IMAGE='circlecisummit'
-              TASK='circlecisummit'
+              CLUSTER='meetjs'
+              FAMILY='meetjs'
+              DOCKER_IMAGE='meetjs'
+              TASK='meetjs'
               SERVICE='app-service'
               # Login to AWS
               aws configure set region $AWS_REGION
               $(aws ecr get-login)
               # Tag and push docker image
-              docker tag app $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
+              docker tag meetjs $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
               docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$DOCKER_IMAGE:$CIRCLE_SHA1
               # Create task for docker deploy
               task_template='[
