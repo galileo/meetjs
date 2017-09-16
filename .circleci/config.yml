@@ -58,7 +58,7 @@ jobs:
                   "environment": [],
                   "links": [],
                   "image": "861611597471.dkr.ecr.eu-central-1.amazonaws.com/summitmeetjs:latest",
-                  "cpu": 10,
+                  "cpu": 10
                 }
               ]'
               echo "$task_template"
