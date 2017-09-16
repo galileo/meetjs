@@ -42,39 +42,16 @@ jobs:
               # Create task for docker deploy
               task_template='[
                 {
-                  "volumesFrom": [],
                   "name": "%s",
                   "image": "%s.dkr.ecr.eu-central-1.amazonaws.com/%s:%s",
-                  "memory": 300,
-                  "extraHosts": null,
-                  "dnsServers": null,
-                  "disableNetworking": null,
-                  "dnsSearchDomains": null,
+                  "essential": true,
+                  "memoryReservation": null,
                   "portMappings": [
                     {
-                      "hostPort": 80,
                       "containerPort": 80,
-                      "protocol": "tcp"
+                      "hostPort": 80
                     }
                   ],
-                  "hostname": null,
-                  "essential": true,
-                  "entryPoint": [],
-                  "mountPoints": [],
-                  "name": "container-meetjs",
-                  "ulimits": null,
-                  "dockerSecurityOptions": null,
-                  "environment": [],
-                  "links": [],
-                  "workingDirectory": null,
-                  "readonlyRootFilesystem": null,
-                    "command": [],
-                  "user": null,
-                  "dockerLabels": null,
-                  "logConfiguration": null,
-                  "cpu": 10,
-                  "privileged": null,
-                  "memoryReservation": null,
                   "environment" : [
                       { "name" : "NODE_ENV", "value" : "production" }
                   ]
