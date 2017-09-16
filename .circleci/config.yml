@@ -43,7 +43,7 @@ jobs:
               task_template='[
                 {
                   "volumesFrom": [],
-                  "memory": 300,
+                  "memory": 299,
                   "extraHosts": null,
                   "dnsServers": null,
                   "disableNetworking": null,
